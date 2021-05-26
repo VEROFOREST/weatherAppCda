@@ -23,7 +23,7 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 2,
-    backgroundColor: 'red',
+    backgroundColor: 'blue',
     alignItems: 'center',
     justifyContent: 'center',
   },

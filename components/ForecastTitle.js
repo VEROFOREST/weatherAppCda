@@ -9,9 +9,7 @@ render(){
     <View>
         <ForecastChoseCity city = {this.props.city}/>
         <Text>{this.props.date}</Text>
-
     </View>
-
     )
 }
 }
