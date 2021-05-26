@@ -31,7 +31,7 @@ export const getLocation = ()=>
 
     }
     catch (err){
-        alert('message erreur not location')
+        alert('message error not location')
       }
 
   }
