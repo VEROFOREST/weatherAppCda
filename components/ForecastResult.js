@@ -7,7 +7,15 @@ class ForecastResult extends Component {
 render(){
     return (
     <View>
-        <Text> prévisions</Text>
+        <Text> {this.props.icon}</Text>
+        <Text>Description : {this.props.description}</Text>
+        <Text>Temperature : {this.props.temperature}</Text>
+        <Text>Mini : {this.props.minTemp}</Text>
+        <Text>Maxi : {this.props.maxTemp}</Text>
+        <Text>Vent : {this.props.wind}</Text>
+        <Text>Humidité : {this.props.humidity}</Text>
+
+
     </View>
 
     )

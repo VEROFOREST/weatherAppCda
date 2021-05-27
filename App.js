@@ -11,9 +11,9 @@ class App extends Component {
     return (
      <Provider store={store}>
      
-    <SafeAreaView style={styles.container}>
-       <Forecast />
-    </SafeAreaView>
+        <SafeAreaView style={styles.container}>
+          <Forecast/>
+        </SafeAreaView>
      </Provider>
     )
     }
