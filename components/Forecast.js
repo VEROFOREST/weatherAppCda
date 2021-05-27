@@ -23,16 +23,23 @@ render()
          (!this.props.loader)?
          <SafeAreaView>
                 
-                {this.props.forecast.location &&
+                {this.props.forecast.location ?
                 <View>
-                    <ForecastTitle city={this.props.forecast.location.name} date={this.props.forecast.location.localtime} />
+                    <ForecastTitle city={this.props.forecast.location.name}
+                                   date={this.props.forecast.location.localtime} />
                     <ForecastResult icon={this.props.forecast.current.weather_icons[0]}
-                            description={this.props.forecast.current.weather_descriptions[0]}
-                            temperature={this.props.forecast.current.temperature}
-                            minTemp = {this.props.forecast.current.temperature - 10}
-                            maxTemp = {this.props.forecast.current.temperature + 10}
-                            wind={this.props.forecast.current.wind_speed}
-                            humidity= {this.props.forecast.current.humidity}/>
+                                    description={this.props.forecast.current.weather_descriptions[0]}
+                                    temperature={this.props.forecast.current.temperature}
+                                    minTemp = {this.props.forecast.current.temperature - 5}
+                                    maxTemp = {this.props.forecast.current.temperature + 5}
+                                    wind={this.props.forecast.current.wind_speed}
+                                    humidity= {this.props.forecast.current.humidity}/>
+                    <ForecastForm placeholder="entrez une ville"
+                     onChange ={(e)=>{this.props.updateInput(e.target.value)}} onSubmitEditing ={(e)=>{this.props.fetchForecast(e.target.value)}} 
+                     value={this.props.input}/>
+                </View>:
+                <View>
+                    <Text>Ville non trouvée, veuillez recommencer</Text>
                     <ForecastForm placeholder="entrez une ville"
                      onChange ={(e)=>{this.props.updateInput(e.target.value)}} onSubmitEditing ={(e)=>{this.props.fetchForecast(e.target.value)}} 
                      value={this.props.input}/>
