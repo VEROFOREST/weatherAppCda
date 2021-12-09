@@ -25,7 +25,7 @@ export const getLocation = () =>
     try {
       const api_call = await fetch('https://api.bigdatacloud.net/data/reverse-geocode-client?city&localityLanguage=fr')
       const responseJson = await api_call.json()
-      console.log(responseJson);
+    //   console.log(responseJson);
       dispatch(fetchForecast(responseJson.locality))
       // dispatch(fetchForecast('Roanne'))
 
@@ -47,8 +47,8 @@ export const fetchForecast = (city) =>
       try {
         const api_call = await fetch('http://api.weatherstack.com/current?access_key=b1dc2d4dee027f600f8db6ca47152e58&query='+city)
       const data = await api_call.json()
-      // console.log(data)
-       if ( data.location.name === city){
+      console.log(data.current)
+       if (data.hasOwnProperty('location')){
                
        dispatch(updateForecast(data));
         } 

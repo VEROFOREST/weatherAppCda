@@ -23,9 +23,10 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 2,
-    backgroundColor: 'blue',
+    backgroundColor: '#F2F2F2',
     alignItems: 'center',
     justifyContent: 'center',
+    // color:'#FFFFFF'
   },
 });
 export default App;
